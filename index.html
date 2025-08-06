@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KAYTRON PROPERTIES</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="logo">
+        <img src="images/logo.png" alt="WanjukindiVel Logo">
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-contact">
+        <a href="tel:+254728085349" class="btn-contact"><i class="fas fa-phone"></i> Call Us</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Find Your Dream Home</h1>
+        <p>Explore the best properties in the market, from cozy apartments to luxurious estates.</p>
+        <a href="#listings" class="cta-btn">Browse Listings</a>
+      </div>
+    </section>
+    <section class="property-listings" id="listings">
+      <div class="container">
+        <h2>Featured Properties</h2>
+        <div class="listing-grid">
+          <div class="listing-card">
+            <img src="images/image1.jpeg" alt="Luxury Villa in Nairobi">
+            <div class="listing-info">
+              <h3>Luxury Villa in Nairobi</h3>
+            </div>
+          </div>
+          <div class="listing-card">
+            <img src="images/image2.jpeg" alt="Modern Apartment in Meru">
+            <div class="listing-info">
+              <h3>Modern Apartment in Meru</h3>
+            </div>
+          </div>
+          <div class="listing-card">
+            <img src="images/property3.jpg" alt="Modern Apartment in Meru">
+            <div class="listing-info">
+              <h3>Modern Apartment in Meru</h3>
+            </div>
+          </div>
+          <div class="listing-card">
+            <img src="images/image4.jpeg" alt="Modern Apartment in Meru">
+            <div class="listing-info">
+              <h3>Modern Apartment in Meru</h3>
+            </div>
+          </div>
+          <div class="listing-card">
+            <img src="images/image5.png" alt="Modern Apartment in Meru">
+            <div class="listing-info">
+              <h3>Modern Apartment in Meru</h3>
+            </div>
+          </div>
+          <div class="listing-card">
+            <img src="images/image6.jpg" alt="Beachfront Condo in Eldoret">
+            <div class="listing-info">
+              <h3>Beachfront Condo in Eldoret</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="properties" class="featured-properties">
+      <h2>Featured Listings</h2>
+      <div class="property-grid">
+        <div class="property-card">
+          <img src="images/property1.jpg" alt="Modern Villa in Mombasa"/>
+          <h3>Modern Villa in Mombasa</h3>
+        </div>
+        <div class="property-card">
+          <img src="images/property2.jpg" alt="Modern Villa in Nyali" />
+          <h3>Modern Villa in Nyali</h>
+        </div>
+        <div class="property-card">
+          <img src="images/property3.jpg" alt="Modern Villa in Ukunda" />
+          <h3>Modern Villa in Ukunda</h3>
+        </div>
+        <div class="property-card">
+          <img src="images/property4.jpg" alt="Modern Villa in Bamburi" />
+          <h3>Modern Villa in Bamburi</h3>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-column">
+        <h3>Dream Homes</h3>
+        <p>Your trusted partner in finding the perfect property.</p>
+      </div>
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#properties">Properties</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-phone"></i> +254 728 085 349</p>
+        <p><i class="fas fa-envelope"></i>kaytronproperties@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Mombasa, Kenya</p>
+      </div>
+      <div class="footer-column">
+        <h4>Subscribe to our Newsletter</h4>
+        <form class="newsletter-form" action="https://formspree.io/f/xyzjwjdk" method="POST">
+          <input type="email" name="email" placeholder="Enter your email" required />
+          <button type="submit"><i class="fas fa-paper-plane"></i></button>
+        </form>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 KAYTRON PROPERTIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/254728085349" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- JS for price filter - DOM-safe -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      document.getElementById('priceFilter').addEventListener('input', function () {
+        const maxPrice = parseInt(this.value);
+        const cards = document.querySelectorAll('.property-card');
+
+        cards.forEach(card => {
+          const priceText = card.querySelector('p').textContent;
+          const match = priceText.match(/Ksh\.(\d+)/);
+          const price = match ? parseInt(match[1]) : 0;
+
+          if (!isNaN(maxPrice)) {
+            card.style.display = price <= maxPrice ? 'block' : 'none';
+          } else {
+            card.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
