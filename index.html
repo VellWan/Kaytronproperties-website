@@ -47,21 +47,21 @@
             </div>
           </div>
           <div class="listing-card">
-            <img src="images/image2.jpeg" alt="Modern Apartment in Meru">
+            <img src="images/image2.jpeg" alt="Modern Apartment in Nairobi">
             <div class="listing-info">
-              <h3>Modern Apartment in Meru</h3>
+              <h3>Modern Apartment in Nairobi</h3>
             </div>
           </div>
           <div class="listing-card">
-            <img src="images/property3.jpg" alt="Modern Apartment in Meru">
+            <img src="images/property3.jpg" alt="Modern Apartment in Nairobi">
             <div class="listing-info">
-              <h3>Modern Apartment in Meru</h3>
+              <h3>Modern Apartment in Nairobi</h3>
             </div>
           </div>
           <div class="listing-card">
-            <img src="images/image4.jpeg" alt="Modern Apartment in Meru">
+            <img src="images/image4.jpeg" alt="Modern Apartment in Nairobi">
             <div class="listing-info">
-              <h3>Modern Apartment in Meru</h3>
+              <h3>Modern Apartment in Nairobi</h3>
             </div>
           </div>
                  </div>
@@ -71,20 +71,20 @@
       <h2>Featured Listings</h2>
       <div class="property-grid">
         <div class="property-card">
-          <img src="images/property1.jpg" alt="Modern Villa in Mombasa"/>
-          <h3>Modern Villa in Meru</h3>
+          <img src="images/property1.jpg" alt="Modern Villa in Nairobi"/>
+          <h3>Modern Villa in Nairobi</h3>
         </div>
         <div class="property-card">
-          <img src="images/property2.jpg" alt="Modern Villa in Nyali" />
-          <h3>Modern Villa in Meru</h>
+          <img src="images/property2.jpg" alt="Modern Villa in Nairobi" />
+          <h3>Modern Villa in Nairobi</h3>
         </div>
         <div class="property-card">
-          <img src="images/property3.jpg" alt="Modern Villa in Ukunda" />
-          <h3>Modern Villa in Meru</h3>
+          <img src="images/property3.jpg" alt="Modern Villa in Nairobi" />
+          <h3>Modern Villa in Nairobi</h3>
         </div>
         <div class="property-card">
-          <img src="images/property4.jpg" alt="Modern Villa in Bamburi" />
-          <h3>Modern Villa in Meru</h3>
+          <img src="images/property4.jpg" alt="Modern Villa in Nairobi" />
+          <h3>Modern Villa in Nairobi</h3>
         </div>
       </div>
     </section>
@@ -133,28 +133,5 @@
   <a href="https://wa.me/254728085349" class="whatsapp-float" target="_blank">
     <i class="fab fa-whatsapp"></i>
   </a>
-
-  <!-- JS for price filter - DOM-safe -->
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      document.getElementById('priceFilter').addEventListener('input', function () {
-        const maxPrice = parseInt(this.value);
-        const cards = document.querySelectorAll('.property-card');
-
-        cards.forEach(card => {
-          const priceText = card.querySelector('p').textContent;
-          const match = priceText.match(/Ksh\.(\d+)/);
-          const price = match ? parseInt(match[1]) : 0;
-
-          if (!isNaN(maxPrice)) {
-            card.style.display = price <= maxPrice ? 'block' : 'none';
-          } else {
-            card.style.display = 'block';
-          }
-        });
-      });
-    });
-  </script>
-
 </body>
 </html>
